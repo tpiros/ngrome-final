@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Cloudinary, CloudinaryImage } from '@cloudinary/url-gen';
 import { format, quality } from '@cloudinary/url-gen/actions/delivery';
-import { thumbnail } from '@cloudinary/url-gen/actions/resize';
+import { pad, thumbnail } from '@cloudinary/url-gen/actions/resize';
 import { focusOn } from '@cloudinary/url-gen/qualifiers/gravity';
 import { face } from '@cloudinary/url-gen/qualifiers/focusOn';
 import { byRadius } from '@cloudinary/url-gen/actions/roundCorners';
 import { blur } from '@cloudinary/url-gen/actions/effect';
+import { ar16X9, ar4X3 } from '@cloudinary/url-gen/qualifiers/aspectRatio';
+import { generativeFill } from '@cloudinary/url-gen/qualifiers/background';
 @Injectable({
   providedIn: 'root',
 })
@@ -59,5 +61,16 @@ export class CloudinaryService {
       .delivery(format('auto'))
       .delivery(quality('auto'));
     return this.img.toURL();
+  }
+
+  genFill(publicId: string, ar: string) {
+    this.img = this.cld.image(publicId);
+    this.img.resize(
+      pad()
+        .width(1500)
+        .aspectRatio(ar === '16x9' ? ar16X9() : ar4X3())
+        .background(generativeFill())
+    );
+    return this.img;
   }
 }
