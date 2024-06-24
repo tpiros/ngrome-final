@@ -35,4 +35,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./gallery/gallery.component').then((mod) => mod.GalleryComponent),
   },
+  {
+    path: 'ai',
+    loadComponent: () =>
+      import('./ai/ai.component').then((mod) => mod.AiComponent),
+  },
 ];
