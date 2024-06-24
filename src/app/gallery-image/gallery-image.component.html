@@ -1,0 +1,22 @@
+<!-- <div
+  class="image-container"
+  [ngStyle]="{ 'background-image': 'url(' + placeholder + ')' }"
+>
+<img
+    [src]="image"
+    (load)="onLoad()"
+    [class.loaded]="imageLoaded"
+    alt="Hogwarts Image"
+  />
+</div> -->
+
+<div class="image-container">
+  <img
+    [ngSrc]="image"
+    alt="Hogwarts Image"
+    width="500"
+    height="285"
+    placeholder
+    priority
+  />
+</div>

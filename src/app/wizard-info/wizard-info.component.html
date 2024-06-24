@@ -1,0 +1,32 @@
+<div class="centered-container">
+  @if (wizard$ | async; as wizard) {
+  <section class="wizard-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <advanced-image class="wizard-image" [cldImg]="img"></advanced-image>
+        </div>
+        <div class="col-md-6">
+          <h1 class="wizard-name">{{ wizard.name }}</h1>
+          <p>
+            <strong>House</strong><br /><span class="house-badge">{{
+              wizard.house
+            }}</span>
+          </p>
+          <p>
+            <strong>Wand: </strong><br />
+            <span class="wand-details"
+              >{{ wizard.wand.wood }}, {{ wizard.wand.core }},
+              {{ wizard.wand.length }}</span
+            >
+          </p>
+          <p>
+            <strong>Biography</strong><br />
+            {{ wizard.bio }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  }
+</div>

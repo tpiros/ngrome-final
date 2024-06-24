@@ -1,0 +1,63 @@
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wizard-details {
+  margin: 40px 0;
+  background-color: #f0e8d8;
+}
+
+.wizard-image {
+  width: 800px;
+  height: 800px;
+}
+
+.wizard-name {
+  color: #6d5f4b;
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.house-badge {
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: #6d5f4b;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.wand-details {
+  color: #8f7a66;
+  font-style: italic;
+}
+
+.wizard-bio {
+  color: #8f7a66;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.wizard-details p {
+  color: #8f7a66;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.wizard-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.wizard-details li {
+  color: #8f7a66;
+  font-size: 16px;
+  line-height: 1.6;
+}

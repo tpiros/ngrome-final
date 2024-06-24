@@ -1,0 +1,14 @@
+<div class="gallery-container">
+  <div class="gallery-grid">
+    @for (image of images(); track image) { @defer (on viewport) {
+    <!-- <app-gallery-image
+      [image]="image.high"
+      [placeholder]="image.low"
+      (loaded)="loaded($event)"
+    ></app-gallery-image> -->
+    <app-gallery-image [image]="image"></app-gallery-image>
+    } @placeholder {
+    <div class="loading">Loading...</div>
+    } }
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<section class="card-container">
+  @for (wizard of (wizards$ | async); track wizard) {
+  <app-wizard-list [wizard]="wizard"></app-wizard-list>
+  }
+</section>

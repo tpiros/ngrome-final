@@ -1,0 +1,8 @@
+<a [routerLink]="['/wizard', wizard.id]">
+  <div class="card">
+    <advanced-image class="wizard-image" [cldImg]="img"></advanced-image>
+    <h3>{{ wizard.name }}</h3>
+    <p>{{ wizard.house }}</p>
+  </div>
+</a>
+<p>{{ checkRender() }}</p>
